@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Route</title>
+    <link rel="stylesheet" href="MAINPAGE.css">
+   
+</head>
+<body>
+   <center>
+  <div class="container">
+    <div class="box">
+      <label>From : </label>
+            <select  name="fname" id="fm" placeholder=" ENTER YOUR SOURCE">
+            <option value="ENTER YOUR SOURCE"></option>
+              <option value="SIRKALI">sirkali</option>
+              <option value="MAYILADUTHURAI">mayliaduthurai</option>
+              <option value="CHIDAMBARAM">chidambaram</option>
+              <option value="kumbakonam">kumbakonam</option>
+              
+            </select>
+            <br><br><br>
+      <label>To : </label>
+            <select name="fname" id="to" placeholder="ENTER YOUR DESTINATION">
+              <option value="ENTER YOUR DESTINATION"></option>
+            <option value="SIRKALI">sirkali</option>
+              <option value="MAYILADUTHURAI">mayliaduthurai</option>
+              <option value="CHIDAMBARAM">chidambaram</option>
+              <option value="kumbakonam">kumbakonam</option>
+              
+            </select>
+            <br><br><br>
+      
+<input type="submit" onclick="route()">
+      </div>
+  </div></center>
+  <script type="text/javascript">
+    function route(){
+
+      var i=document.getElementById("fm").value;
+      var j=document.getElementById("to").value;
+      var a=i.toUpperCase();
+      var b=j.toUpperCase();
+      if(a==='SIRKALI'&&b==='MAYILADUTHURAI'||'sirkali'&&b==='mayliaduthurai') {
+
+        window.location.href="bus0.html";
+
+    }
+       else if(a==='MAYILADUTHURAI'&&b==='SIRKALI'||'mayliaduthurai'&&b==='sirkali'){
+        window.location.href="bus1.html";
+       }
+
+       else if(a==='SIRKALI'&&b==='CHIDAMBARAM'||'sirkali'&&b==='chidambaram') {
+        window.location.href="bus2.html";
+       }
+       else if(a==='CHIDAMBARAM'&&b==='SIRKALI'||'chidambaram'&&b==='sirkali') {
+        window.location.href="bus3.html";
+       }
+       else if(a==='KUMBAKONAM'&&b==='SIRKALI'||'sirkali'&&b==='kumbakonam') {
+        window.location.href="bus4.html";
+       }
+       else if(a==='SIRKALI'&&b==='KUMBAKONAM'||'sirkali'&&b==='kumbakonam') {
+        window.location.href="bus5.html";
+       }
+       else if(a==='CHIDAMBARAM'&&b==='KUMBAKONAM'||'chidambaram'&&b==='kumbakonam') {
+        window.location.href="bus6.html";
+       }
+       else if(a==='KUMBAKONAM'&&b==='CHIDAMBARAM'||'chidambaram'&&b==='kumbakonam') {
+        window.location.href="bus7.html";
+       }
+       else if(a==='KUMBAKONAM'&&b==='MAYILADUTHURAI'||'mayliaduthurai'&&b==='kumbakonam') {
+        window.location.href="bus9.html";}
+        else if(a==='MAYILADUTHURAI'&&b==='KUMBAKONAM'||'mayliaduthurai'&&b==='kumbakonam') {
+        window.location.href="bus8.html";}
+        else if(a==='CHIDAMBARAM'&&b==='MAYILADUTHURAI'||'chidambaram'&&b==='mailaduthura') {
+        window.location.href="bus10.html";}
+        else if(a==='MAYILADUTHURAI'&&b==='CHIDAMBARAM'||'chidambaram'&&b==='mailaduthurai') {
+        window.location.href="bus11.html";}
+
+    else{
+      window.alert("Please Enter Place Name Correctly");
+    }
+   }
+    </script>
+
+</body>
+</html>
